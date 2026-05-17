@@ -40,7 +40,8 @@
   .logo img{height:38px;width:auto}
   .nav-meta{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
   .nav-meta .phone{display:inline-flex;align-items:center;gap:6px;color:var(--green-2);font-weight:800;font-size:12px}
-  .nav-meta .phone img{width:14px;height:14px;opacity:.85;display:block}
+  .nav-meta .phone img{width:14px;height:14px;opacity:.85;display:block;flex-shrink:0}
+  .nav-meta .phone .phone-short{display:none}
   .summer-tag{font-weight:900;font-size:22px;color:var(--navy);letter-spacing:-.5px}
   .summer-tag b{color:var(--green)}
 
@@ -275,6 +276,164 @@
     .promo-row{text-align:center}
     .promo-strip,.temporadas{padding:36px 0}
   }
+
+  /* Tablet / mobile */
+  @media (max-width:640px){
+    .wrap{padding:0 20px}
+    .nav{padding:14px 20px;gap:12px}
+    .hero{min-height:auto;align-items:stretch}
+    .hero::after{background:linear-gradient(180deg,rgba(12,20,63,.88) 0%,rgba(12,20,63,.72) 55%,rgba(12,20,63,.45) 100%)}
+    .hero-grid{padding:32px 0 40px}
+    .hero-card{padding:24px 20px 22px;border-radius:18px;max-width:none}
+    .sec,.adventure,.why,.testi{padding:52px 0}
+    .ages{padding:52px 0}
+    .locations{padding:52px 0}
+    .final{padding:60px 0}
+    .gal-row{grid-template-columns:1fr;max-width:320px}
+    .ages-row{grid-template-columns:1fr;gap:28px;max-width:280px}
+    .age .circle{width:120px;height:120px}
+    .loc-grid{grid-template-columns:1fr;max-width:340px;margin:0 auto}
+    .promo-left h2{font-size:26px}
+    .flip .digit{width:48px;height:62px;font-size:36px}
+    .promo-price .now{font-size:36px}
+    .temp-card .n{font-size:44px;width:44px}
+    .temp-horarios{justify-content:center}
+    .pillar{flex-direction:column;align-items:flex-start;gap:6px;border-radius:16px;padding:14px 18px;text-align:left}
+    .pillar .n{align-self:flex-end}
+    .cta-pill.huge{font-size:16px;padding:16px 24px}
+    .final h2{font-size:28px}
+    .faq h2{font-size:28px}
+  }
+
+  /* Small phones */
+  @media (max-width:480px){
+    .wrap{padding:0 16px}
+    .nav{padding:12px 16px;flex-direction:column;align-items:stretch}
+    .nav-meta{justify-content:center;gap:10px}
+    .logo{align-self:center}
+    .logo img{height:32px}
+    .summer-tag{font-size:18px}
+    .nav-meta .phone{font-size:11px}
+    .cta-pill{font-size:13px;padding:11px 18px;gap:8px}
+    .cta-pill .wa{width:22px;height:22px}
+    .cta-pill .wa img{width:14px;height:14px}
+    h1.hero-h,.sec h2,.adv-h h2,.why-h h2,.testi-h h2,.loc-h h2,.final h2,.temp-left h2,.ages-head h2{font-size:24px;letter-spacing:-.5px}
+    .hero-eyebrow{font-size:9px;letter-spacing:1px;padding:5px 10px;max-width:100%}
+    .hero-sub{font-size:13.5px;margin-bottom:18px}
+    .hero-bullets li{font-size:12px}
+    .hero-ctas{flex-direction:column;align-items:stretch}
+    .hero-ctas .cta-pill{justify-content:center;width:100%}
+    .hero-ctas .ghost{text-align:center;font-size:10px}
+    .promo-left h2{font-size:22px}
+    .promo-left .pre,.promo-left p{font-size:10px}
+    .promo-price{padding:12px 16px}
+    .promo-price .now{font-size:32px}
+    .promo-price .now small{font-size:14px}
+    .flip{gap:6px}
+    .flip .digit{width:42px;height:54px;font-size:30px}
+    .flip-label{font-size:10px;letter-spacing:1px}
+    .temp-card{padding:14px 16px;gap:12px;flex-wrap:wrap}
+    .temp-card .n{font-size:36px;width:36px}
+    .temp-card .info .when{font-size:13px}
+    .temp-card .info .meta{font-size:10px}
+    .temp-horarios .hr{font-size:11px;padding:6px 10px}
+    .age .name{font-size:16px}
+    .age .yrs{font-size:11px}
+    .sec-eyebrow,.adv-h .pre,.why-h .pre,.testi-h .pre,.loc-h .pre{font-size:10px;letter-spacing:2px}
+    .sec .lead,.adv-h .sub{font-size:14px;margin-bottom:28px}
+    .adv-item{padding:14px 16px;gap:12px}
+    .adv-item .ic{width:38px;height:38px;font-size:18px}
+    .adv-item h3{font-size:14px}
+    .adv-item p{font-size:12.5px}
+    .pillar{font-size:11px;padding:12px 14px;letter-spacing:.3px}
+    .why-stamp p{font-size:15px}
+    .quote{padding:28px 18px 20px}
+    .quote p{font-size:12.5px;margin:24px 0 14px}
+    .quote .qm,.quote .qm2{font-size:44px}
+    .qa{padding:14px 16px}
+    .qa .q{font-size:12px}
+    .qa .a{font-size:12px}
+    .final p{font-size:14px}
+    .cta-pill.huge{font-size:14px;padding:14px 20px;width:100%;justify-content:center}
+    .final .meta{font-size:10px;line-height:1.45}
+    footer .row{flex-direction:column;text-align:center;font-size:11px;line-height:1.5}
+    .wa-fab{width:52px;height:52px;right:14px;bottom:14px}
+    .wa-fab img{width:26px;height:26px}
+    .promo-strip::before,.promo-strip::after{font-size:48px}
+    .final::before,.final::after{font-size:48px}
+  }
+
+  /* Very narrow phones (~325px) */
+  @media (max-width:380px){
+    html{overflow-x:hidden}
+    body{overflow-x:hidden}
+    .wrap{padding:0 12px}
+    .nav{padding:10px 12px;gap:8px}
+    .logo img{height:28px}
+    .summer-tag{font-size:15px;letter-spacing:0}
+    .nav-meta .phone .phone-full{display:none}
+    .nav-meta .phone .phone-short{display:inline}
+    .nav-meta .phone{font-size:10px;gap:4px}
+    .nav .cta-pill{font-size:11px;padding:9px 14px}
+    .hero-grid{padding:24px 0 32px}
+    .hero-card{padding:16px 14px 18px;border-radius:14px}
+    .hero-brand{margin-bottom:12px}
+    h1.hero-h{font-size:20px;line-height:1.08;letter-spacing:-.35px;margin-bottom:10px}
+    .hero-eyebrow{font-size:8px;letter-spacing:.6px;padding:4px 8px;line-height:1.35}
+    .hero-sub{font-size:12.5px;line-height:1.45;margin-bottom:14px}
+    .hero-bullets{gap:6px;margin-bottom:16px}
+    .hero-bullets li{font-size:11px;gap:8px}
+    .hero-bullets li::before{font-size:12px;flex-shrink:0}
+    .cta-pill{font-size:12px;padding:10px 16px}
+    .promo-strip,.temporadas{padding:28px 0}
+    .promo-left h2{font-size:19px}
+    .promo-left .pre{letter-spacing:1.2px}
+    .promo-price .now{font-size:28px}
+    .promo-price .full{font-size:12px}
+    .promo-price .save{font-size:9px;padding:2px 8px}
+    .flip .digit{width:36px;height:46px;font-size:26px;border-radius:6px}
+    .flip-label{font-size:9px;margin-top:8px}
+    .temp-left h2,h1.hero-h,.sec h2,.adv-h h2,.why-h h2,.testi-h h2,.loc-h h2,.final h2,.ages-head h2{font-size:20px}
+    .temp-left p{font-size:12px}
+    .temp-card .n{font-size:30px;width:28px}
+    .temp-card .info .when{font-size:11.5px;word-break:break-word}
+    .temp-horarios{gap:6px}
+    .temp-horarios .pre{width:100%;text-align:center;margin-bottom:2px}
+    .temp-horarios .hr{font-size:10px;padding:5px 8px;letter-spacing:0;text-align:center;width:100%}
+    .ages-head .pre{font-size:9px;letter-spacing:1.5px}
+    .ages-head h2 br{display:none}
+    .ages-head h2{font-size:18px;line-height:1.15}
+    .age .circle{width:100px;height:100px;border-width:4px}
+    .age .name{font-size:14px}
+    .age .yrs{font-size:10px;padding:2px 10px}
+    .adv-h h2,.why-h h2,.testi-h h2,.loc-h h2{font-size:20px}
+    .adv-h .sub{font-size:13px}
+    .adv-photo{border-radius:16px}
+    .pillar{font-size:10px;padding:10px 12px;gap:4px}
+    .pillar span:first-child{line-height:1.35}
+    .pillar .n{font-size:11px}
+    .why-stamp p{font-size:13px}
+    .loc .name{font-size:12px}
+    .loc .addr{font-size:10.5px}
+    .loc{padding:14px}
+    .faq h2{font-size:22px;margin-bottom:22px}
+    .qa .qrow{gap:10px}
+    .qa .q{font-size:11px;line-height:1.35}
+    .qa .chev{font-size:16px;flex-shrink:0}
+    .final h2{font-size:22px;letter-spacing:-.4px}
+    .final h2 br{display:none}
+    .final p{font-size:13px;margin-bottom:22px}
+    .cta-pill.huge{font-size:13px;padding:12px 16px}
+    .cta-pill.huge .wa{width:24px;height:24px}
+    footer{padding:24px 0;font-size:10px}
+    .social-links a{width:28px;height:28px}
+    .social-links img{width:18px;height:18px}
+    .wa-fab{width:48px;height:48px;right:10px;bottom:10px}
+    .sec,.adventure,.why,.testi,.faq{padding-top:40px;padding-bottom:40px}
+    .faq{padding-bottom:48px}
+    .gallery{padding:40px 0 24px}
+    .gal-row{max-width:100%}
+  }
 </style>
 </head>
 <body>
@@ -283,7 +442,7 @@
   <a href="#" class="logo" aria-label="Fyr Lois"><img src="logo-fyrlois.svg" alt="Fyr Lois" width="140" height="53"></a>
   <div class="nav-meta">
     <span class="summer-tag">SUMMER <b>2026</b></span>
-    <a class="phone" href="tel:+16893225402"><img src="icon-set-Phone%20Green.svg" alt="" width="14" height="14"> +1 (689) 322-5402</a>
+    <a class="phone" href="tel:+16893225402" aria-label="Llamar +1 (689) 322-5402"><img src="icon-set-Phone%20Green.svg" alt="" width="14" height="14"><span class="phone-full">+1 (689) 322-5402</span><span class="phone-short">Llamar</span></a>
     <a class="cta-pill whatsapp-link" href="#wa">
       <span class="wa">
         <img src="social-icons-WA%20Green.svg" alt="" width="16" height="16">
