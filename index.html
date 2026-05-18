@@ -59,10 +59,10 @@
   .hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(12,20,63,.85) 0%,rgba(12,20,63,.55) 45%,rgba(12,20,63,.15) 75%,transparent 100%)}
   .hero-grid{position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;z-index:2;width:100%;padding:60px 0}
 
-  .hero-card{background:rgba(255,255,255,.97);border-radius:24px;padding:38px 36px 32px;box-shadow:0 30px 60px rgba(0,0,0,.4);color:var(--navy);max-width:560px;backdrop-filter:blur(6px)}
-  .hero-brand{display:block;width:min(100%,320px);height:auto;margin-bottom:16px}
+  .hero-card{position:relative;background:rgba(255,255,255,.97);border-radius:24px;padding:38px 90px 32px 36px;box-shadow:0 30px 60px rgba(0,0,0,.4);color:var(--navy);max-width:560px;backdrop-filter:blur(6px);text-align:center}
+  .hero-brand{display:block;width:min(100%,320px);height:auto;margin:0 auto 16px}
 
-  .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(238,37,118,.1);color:var(--pink);font-weight:900;font-size:11px;letter-spacing:2px;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+  .hero-eyebrow{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:rgba(238,37,118,.1);color:var(--pink);font-weight:900;font-size:11px;letter-spacing:2px;padding:6px 12px;border-radius:999px;margin:0 auto 14px}
   .hero-eyebrow::before{content:"●";font-size:8px}
   h1.hero-h{margin:0 0 14px;font-weight:900;font-size:42px;line-height:1.02;letter-spacing:-1.2px;color:var(--navy)}
   h1.hero-h .pink{color:var(--pink)}
@@ -72,18 +72,16 @@
   .hero-sub b{color:var(--navy);font-weight:800}
 
   .hero-bullets{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-direction:column;gap:8px}
-  .hero-bullets li{display:flex;gap:10px;align-items:center;font-size:13.5px;font-weight:700;color:var(--navy)}
+  .hero-bullets li{display:flex;gap:10px;align-items:center;justify-content:center;font-size:13.5px;font-weight:700;color:var(--navy)}
   .hero-bullets li::before{content:"⚽";font-size:14px}
   .hero-bullets li:nth-child(2)::before{content:"🌎"}
   .hero-bullets li:nth-child(3)::before{content:"💬"}
 
-  .hero-ctas{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .hero-ctas{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap}
   .hero-ctas .ghost{font-weight:800;color:var(--muted);font-size:11px;letter-spacing:.3px}
 
-  .hero-right{position:relative;display:none}
-  @media (min-width:980px){ .hero-right{display:block;min-height:120px} }
-  .hero-flag{position:absolute;right:0;bottom:40px;width:84px;height:84px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--pink-2));color:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;font-weight:900;font-size:11px;letter-spacing:1px;line-height:1.1;box-shadow:0 12px 28px rgba(196,25,97,.4);border:4px solid #fff;transform:rotate(-8deg);z-index:3}
-  .hero-flag b{font-size:22px;letter-spacing:-1px;display:block;margin-bottom:2px}
+  .hero-flag{position:absolute;top:14px;right:14px;width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--pink-2));color:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;font-weight:900;font-size:10px;letter-spacing:1px;line-height:1.1;box-shadow:0 12px 28px rgba(196,25,97,.4);border:4px solid #fff;transform:rotate(-8deg);z-index:3}
+  .hero-flag b{font-size:20px;letter-spacing:-1px;display:block;margin-bottom:2px}
 
   /* PROMO STRIP */
   .promo-strip{background:linear-gradient(90deg,var(--pink) 0%,var(--pink-2) 100%);color:#fff;padding:32px 0;position:relative;overflow:hidden}
@@ -250,8 +248,9 @@
   .final h2{margin:0 0 14px;font-weight:900;font-size:48px;letter-spacing:-1px;line-height:1.05;position:relative}
   .final h2 .y{color:var(--yellow)}
   .final h2 .g{color:var(--green)}
-  .final p{margin:0 0 28px;color:#fff;font-weight:600;font-size:17px;max-width:680px;margin-left:auto;margin-right:auto;line-height:1.5;position:relative}
-  .final p b{color:var(--yellow);font-weight:900}
+  .final-copy{margin:0 auto 28px;max-width:680px;position:relative;display:flex;flex-direction:column;gap:10px}
+  .final-copy p{margin:0;color:#fff;font-weight:600;font-size:17px;line-height:1.5}
+  .final-copy p b{color:var(--yellow);font-weight:900}
   .final .row{position:relative;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;align-items:center}
   .final .meta{margin-top:18px;color:rgba(255,255,255,.85);font-weight:700;font-size:12px;letter-spacing:.5px;position:relative}
 
@@ -269,6 +268,7 @@
 
   @media (max-width:980px){
     .hero-grid,.promo-row,.temp-grid,.ages-row,.adv-grid,.testi-grid,.loc-grid{grid-template-columns:1fr}
+    .hero-grid{justify-items:center}
     .loc-grid{grid-template-columns:repeat(2,1fr)}
     .ages-row{grid-template-columns:repeat(3,1fr);gap:14px}
     .age .circle{width:96px;height:96px}
@@ -284,7 +284,9 @@
     .hero{min-height:auto;align-items:stretch}
     .hero::after{background:linear-gradient(180deg,rgba(12,20,63,.88) 0%,rgba(12,20,63,.72) 55%,rgba(12,20,63,.45) 100%)}
     .hero-grid{padding:32px 0 40px}
-    .hero-card{padding:24px 20px 22px;border-radius:18px;max-width:none}
+    .hero-card{padding:24px 78px 22px 20px;border-radius:18px;max-width:none}
+    .hero-flag{top:10px;right:10px;width:64px;height:64px;font-size:9px;border-width:3px}
+    .hero-flag b{font-size:17px}
     .sec,.adventure,.why,.testi{padding:52px 0}
     .ages{padding:52px 0}
     .locations{padding:52px 0}
@@ -353,7 +355,7 @@
     .qa{padding:14px 16px}
     .qa .q{font-size:12px}
     .qa .a{font-size:12px}
-    .final p{font-size:14px}
+    .final-copy p{font-size:14px}
     .cta-pill.huge{font-size:14px;padding:14px 20px;width:100%;justify-content:center}
     .final .meta{font-size:10px;line-height:1.45}
     footer .row{flex-direction:column;text-align:center;font-size:11px;line-height:1.5}
@@ -376,7 +378,9 @@
     .nav-meta .phone{font-size:10px;gap:4px}
     .nav .cta-pill{font-size:11px;padding:9px 14px}
     .hero-grid{padding:24px 0 32px}
-    .hero-card{padding:16px 14px 18px;border-radius:14px}
+    .hero-card{padding:16px 72px 18px 14px;border-radius:14px}
+    .hero-flag{top:8px;right:8px;width:58px;height:58px;font-size:8px}
+    .hero-flag b{font-size:15px}
     .hero-brand{margin-bottom:12px}
     h1.hero-h{font-size:20px;line-height:1.08;letter-spacing:-.35px;margin-bottom:10px}
     .hero-eyebrow{font-size:8px;letter-spacing:.6px;padding:4px 8px;line-height:1.35}
@@ -422,7 +426,8 @@
     .qa .chev{font-size:16px;flex-shrink:0}
     .final h2{font-size:22px;letter-spacing:-.4px}
     .final h2 br{display:none}
-    .final p{font-size:13px;margin-bottom:22px}
+    .final-copy{font-size:13px;margin-bottom:22px;gap:8px}
+    .final-copy p{font-size:13px}
     .cta-pill.huge{font-size:13px;padding:12px 16px}
     .cta-pill.huge .wa{width:24px;height:24px}
     footer{padding:24px 0;font-size:10px}
@@ -457,10 +462,11 @@
   <img class="hero-bg-img" src="hero.jpg" alt="Niños en el Summer World Cup Adventure de Fyr Lois" width="4032" height="3024" decoding="async" fetchpriority="high">
   <div class="wrap hero-grid">
     <div class="hero-card">
+      <div class="hero-flag"><b>$480</b><span>DESDE</span></div>
       <img class="hero-brand" src="logocup.png" alt="Fyr Lois World Cup Adventure" width="640" height="400" decoding="async">
       <span class="hero-eyebrow">SUMMER 2026 · 4 SEDES EN VENEZUELA</span>
-      <h1 class="hero-h">Este verano tu hijo <span class="pink">juega</span>, <span class="green">descubre el mundo</span> y aprende inglés sin darse cuenta.</h1>
-      <p class="hero-sub">Mientras otros niños se pasan las vacaciones pegados al celular y <b>olvidan el inglés del año pasado</b>, el tuyo lo está usando todos los días — jugando, compitiendo, riéndose con nuevos amigos. <b>4 semanas. Inmersión real. Aprenden jugando — no estudiando.</b></p>
+      <h1 class="hero-h">Este verano tu hijo <span class="pink">juega</span>, <span class="green">descubre el mundo</span> y Aprende inglés mientras se divierte.</h1>
+      <p class="hero-sub">Mientras otros niños se pasan las vacaciones pegados al celular <b>Y Olvida el inglés que aprendieron en clases</b>, el tuyo lo está usando todos los días — jugando, compitiendo, riéndose con nuevos amigos. <b>4 semanas. Inmersión real. aprende inglés jugando, no estudiando.</b></p>
       <ul class="hero-bullets">
         <li>Juegos inspirados en el Mundial</li>
         <li>Cultura de los países que juegan</li>
@@ -475,9 +481,6 @@
         </button>
         <span class="ghost">⚡ Respuesta WhatsApp &lt; 10 min</span>
       </div>
-    </div>
-    <div class="hero-right">
-      <div class="hero-flag"><b>$480</b><span>DESDE</span></div>
     </div>
   </div>
 </section>
@@ -511,7 +514,7 @@
   <div class="wrap temp-grid">
     <div class="temp-left">
       <h2>TEMPORADAS <span class="y">DISPONIBLES</span></h2>
-      <p>Elige la que mejor encaje con las vacaciones de tu hijo. Mismo programa, dos arranques.</p>
+      <p>Elige la que mejor se adapte a las vacaciones de tu hijo. Mismo programa dos temporadas.</p>
     </div>
     <div class="temp-right">
       <div class="temp-card">
@@ -530,8 +533,8 @@
       </div>
       <div class="temp-horarios">
         <span class="pre">HORARIOS:</span>
-        <span class="hr">GRUPO 1 · 9:00 AM A 12:00 PM</span>
-        <span class="hr">GRUPO 2 · 2:00 PM A 5:00 PM</span>
+        <span class="hr">TURNO AM · 9:00 AM A 12:00 PM</span>
+        <span class="hr">TURNO PM · 2:00 PM A 5:00 PM</span>
       </div>
     </div>
   </div>
@@ -588,7 +591,7 @@
           <div class="ic">🌎</div>
           <div>
             <h3>CULTURA DE DIFERENTES PAÍSES</h3>
-            <p>Cada semana viaja a un país que está en el Mundial: come su comida típica, aprende su himno, descubre sus tradiciones. El mundo deja de ser un libro y se vuelve memoria.</p>
+            <p>Cada semana viaja a un país que está en el Mundial: conoce su comida típica, aprende su himno, descubre sus tradiciones. El mundo deja de ser un libro y se vuelve memoria.</p>
           </div>
         </li>
         <li class="adv-item">
@@ -609,7 +612,7 @@
     <div class="why-h">
       <span class="pre">¿POR QUÉ ESTE SUMMER?</span>
       <h2>Una experiencia de <b>diversión y aprendizaje</b>.</h2>
-      <p>27 AÑOS DE EXPERIENCIA · MÁS DE 100,000 ESTUDIANTES</p>
+      <p>27 AÑOS DE EXPERIENCIA · MÁS DE 100,000 ESTUDIANTES EGRESADOS</p>
     </div>
     <div class="pillars">
       <div class="pillar"><span>27 AÑOS DE EXPERIENCIA</span><span class="n">01</span></div>
@@ -675,8 +678,8 @@
   <div class="wrap">
     <div class="loc-h">
       <span class="pre">DÓNDE TE ESPERAMOS</span>
-      <h2><b>4 sedes</b> · escoge la más cerca.</h2>
-      <p class="sub">Todas con salones acondicionados, profesores certificados y el mismo programa World Cup Adventure.</p>
+      <h2><b>4 sedes</b> · escoge la más cercana a ti.</h2>
+      <p class="sub">Todas con salones acondicionados, profesores certificados y el mismo programa: World Cup Adventure.</p>
     </div>
     <div class="loc-grid">
       <div class="loc">
@@ -710,31 +713,19 @@
     <div class="faq-list" id="faqList">
       <div class="qa">
         <div class="qrow"><p class="q">¿QUÉ EDADES PUEDEN PARTICIPAR?</p><span class="chev">▾</span></div>
-        <p class="a">El programa está diseñado para niños y adolescentes de 3 a 17 años, organizados en tres grupos por edad: Kids (3-5), Elementary (6-11) y High School (12-17). Cada grupo tiene actividades adaptadas a su etapa, mismo profesor certificado, misma metodología.</p>
-      </div>
-      <div class="qa">
-        <div class="qrow"><p class="q">¿ES NECESARIO TENER CONOCIMIENTOS PREVIOS DE INGLÉS?</p><span class="chev">▾</span></div>
-        <p class="a">No es necesario. Hacemos una nivelación rápida al inicio para ubicar a cada participante en el grupo correcto y asegurar que aproveche cada actividad al máximo. Tenemos niños que llegan sin saber nada — y salen hablando.</p>
-      </div>
-      <div class="qa">
-        <div class="qrow"><p class="q">¿QUÉ INCLUYE EL PROGRAMA?</p><span class="chev">▾</span></div>
-        <p class="a">Las 4 semanas de clases dinámicas en inglés, actividades recreativas, juegos inspirados en el Mundial, dinámicas grupales y una experiencia temática semanal por país. <b>El material de apoyo se cobra aparte</b> — te lo confirmamos al momento de inscribir.</p>
-      </div>
-      <div class="qa">
-        <div class="qrow"><p class="q">¿ES UN CAMPAMENTO DE FÚTBOL O DE INGLÉS?</p><span class="chev">▾</span></div>
-        <p class="a">Es un summer camp <b>de inglés</b>. La temática está inspirada en el Mundial de Fútbol porque es lo que motiva a los niños este año — pero no es un campamento deportivo. Todo está diseñado para que vivan una experiencia divertida mientras desarrollan su inglés de forma natural.</p>
+        <p class="a">El programa está diseñado para niños y adolescentes de 3 a 17 años, organizados en tres grupos por edad: Kids (3-5), Elementary (6-11) y High School (12-17). Cada uno desarrolla actividades adaptadas a su etapa, manteniendo la misma metodología y acompañamiento de profesores certificados.</p>
       </div>
       <div class="qa">
         <div class="qrow"><p class="q">¿CUÁNTO DURA Y CUÁNDO EMPIEZA?</p><span class="chev">▾</span></div>
-        <p class="a">El programa dura 4 semanas. Hay 2 temporadas: la primera del 20 de julio al 14 de agosto, la segunda del 17 de agosto al 11 de septiembre. Lunes a viernes, en dos horarios a elegir: Grupo 1 (9 AM a 12 PM) o Grupo 2 (2 PM a 5 PM).</p>
+        <p class="a">El programa dura 4 semanas. Hay 2 temporadas: la primera es desde el 20 de julio al 14 de agosto y la segunda del 17 de agosto al 11 de septiembre. Las actividades son de lunes a viernes, en dos horarios a elegir: Turno AM (9 AM a 12 PM) o Turno PM (2 PM a 5 PM).</p>
       </div>
       <div class="qa">
         <div class="qrow"><p class="q">¿CUÁNTO CUESTA?</p><span class="chev">▾</span></div>
-        <p class="a">Precio regular: $780 por las 4 semanas. <b>Preventa primeros 25 cupos: $480</b> (40% de descuento). Una vez se llenen los cupos de preventa, el precio sube. Por eso te conviene escribir hoy por WhatsApp para confirmar tu lugar.</p>
+        <p class="a">El precio regular es de: $780 por las 4 semanas. En preventa, los primeros 25 cupos tienen un costo: $480 (con 40% de descuento). Una vez se llenen estos primeros cupos el precio sube. Por eso te conviene escribir hoy por WhatsApp para reservar tu lugar.</p>
       </div>
       <div class="qa">
         <div class="qrow"><p class="q">¿CÓMO ME INSCRIBO?</p><span class="chev">▾</span></div>
-        <p class="a">Escríbenos por WhatsApp. Te confirmamos disponibilidad en tu sede preferida, te enviamos los datos para apartar el cupo y listo — tu hijo arranca el día que escojas. Respondemos en menos de 10 minutos en horario laboral.</p>
+        <p class="a">Escríbenos por WhatsApp para confirmar la disponibilidad en tu sede preferida, te enviaremos los datos para apartar el cupo y listo, tu hijo arranca el día que escojas. Respondemos en menos de 10 minutos, en horario laboral.</p>
       </div>
     </div>
   </div>
@@ -743,8 +734,12 @@
 <!-- FINAL CTA -->
 <section class="final">
   <div class="wrap">
-    <h2>Tu hijo va a vivir <span class="y">un Mundial</span><br>sin salir de Caracas. <span class="g">¿Le entregas el balón?</span></h2>
-    <p>4 semanas. 4 sedes. 2 horarios. <b>$480 en preventa</b> (regular $780 · material aparte). Quedan pocos cupos al precio de preventa — escríbenos hoy por WhatsApp y te lo confirmamos en menos de 10 minutos.</p>
+    <h2>Tu hijo va a vivir <span class="y">un Mundial</span><br>sin salir de su ciudad. <span class="g">¿Le entregas el balón?</span></h2>
+    <div class="final-copy">
+      <p>4 semanas. 4 sedes. 2 horarios</p>
+      <p>Precio de preventa: <b>$480</b> (Regular: $780 • Material adicional)</p>
+      <p>Últimos cupos. Escríbenos hoy por WhatsApp y reserva el tuyo en menos de 10 minutos.</p>
+    </div>
     <div class="row">
       <button class="cta-pill huge whatsapp-link" type="button">
         <span class="wa">
